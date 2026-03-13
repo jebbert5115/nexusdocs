@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus — Legal</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-primary: #08090f;
+      --bg-secondary: #0d1524;
+      --bg-tertiary: #112038;
+      --text-primary: #e8edf5;
+      --text-secondary: #8aa3c8;
+      --text-muted: #546e8a;
+      --accent: #2272d4;
+      --accent-hover: #1a5ab0;
+      --border: #1a2d4a;
+      --table-alt: #0f1c30;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      height: 60px;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .brand span { color: var(--accent); }
+
+    nav { display: flex; gap: 4px; }
+
+    .tab {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+
+    .tab:hover { background: var(--bg-tertiary); color: var(--text-primary); }
+
+    .tab.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+    .section { display: none; }
+    .section.active { display: block; }
+
+    .updated {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      border: 1px solid var(--border);
+      padding: 4px 12px;
+      border-radius: 4px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+    }
+
+    p { margin-bottom: 14px; color: var(--text-secondary); }
+
+    ul, ol {
+      margin-bottom: 14px;
+      padding-left: 24px;
+      color: var(--text-secondary);
+    }
+
+    li { margin-bottom: 6px; }
+
+    strong { color: var(--text-primary); font-weight: 600; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 20px;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+    }
+
+    th {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    td { color: var(--text-secondary); }
+
+    tr:nth-child(even) td { background: var(--table-alt); }
+
+    .legal-caps {
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 20px 24px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    footer a { color: var(--text-secondary); }
+    footer a:hover { color: var(--accent); }
+    .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+
+    @media (max-width: 600px) {
+      .header-inner { gap: 16px; height: auto; padding: 12px 16px; flex-wrap: wrap; }
+      .tab { padding: 6px 12px; font-size: 0.82rem; }
+      main { padding: 24px 16px 48px; }
+      h1 { font-size: 1.5rem; }
+      h2 { font-size: 1.15rem; }
+      table { font-size: 0.8rem; }
+      th, td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand"><span>N</span>exus</div>
+    <nav>
+      <button class="tab active" data-target="privacy">Privacy Policy</button>
+      <button class="tab" data-target="tos">Terms of Service</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ==================== PRIVACY POLICY ==================== -->
+  <div id="privacy" class="section active">
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: March 13, 2026</div>
+
+    <p>This Privacy Policy describes how Nexus ("the Bot", "we", "us") collects, uses, stores, and handles information when you use the Bot in your Discord server.</p>
+
+    <h2>1. Who We Are</h2>
+    <p>Nexus is a Discord bot providing moderation, entertainment, leveling, economy, utility, and server-management features. The Bot is operated by its developer(s) ("we", "us", "our").</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We only collect data that is necessary for the Bot's features to function. We do <strong>not</strong> collect names, email addresses, IP addresses, passwords, or any personally identifiable information beyond what Discord itself makes available.</p>
+
+    <h3>2.1 User Data</h3>
+    <table>
+      <thead><tr><th>Data</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Discord User ID</td><td>Identifying users across leveling, economy, moderation actions, and feedback</td></tr>
+        <tr><td>XP / Level</td><td>Powering the leveling and role-reward system</td></tr>
+        <tr><td>Economy balance &amp; transaction history</td><td>Powering the virtual currency and economy features</td></tr>
+        <tr><td>Message count (not content)</td><td>Calculating XP gains</td></tr>
+      </tbody>
+    </table>
+
+    <h3>2.2 Server (Guild) Data</h3>
+    <table>
+      <thead><tr><th>Data</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Discord Guild (Server) ID</td><td>Linking all configuration to the correct server</td></tr>
+        <tr><td>Channel IDs &amp; Role IDs</td><td>Storing feature configurations (welcome channel, log channel, mute role, etc.)</td></tr>
+        <tr><td>Moderation configuration</td><td>AutoMod rules, anti-nuke settings, nick-ban roles, sticky messages</td></tr>
+        <tr><td>Counting channel data</td><td>Channel, current count, user stats, reaction settings</td></tr>
+        <tr><td>Welcome / farewell messages</td><td>Greeting new and departing members</td></tr>
+        <tr><td>Leveling &amp; economy settings</td><td>Per-server customisation of feature behaviour</td></tr>
+        <tr><td>Backup data</td><td>Server configuration snapshots for disaster recovery</td></tr>
+        <tr><td>Logging settings</td><td>Which events are logged and where</td></tr>
+      </tbody>
+    </table>
+
+    <h3>2.3 Message Data</h3>
+    <p>The Bot <strong>reads</strong> message content only where required by a specific feature:</p>
+    <ul>
+      <li><strong>AutoMod</strong> — to detect and act on prohibited words, links, or patterns.</li>
+      <li><strong>Counting</strong> — to validate numbers in the counting channel.</li>
+      <li><strong>Sticky messages</strong> — to re-post pinned messages after new activity.</li>
+      <li><strong>Feedback</strong> — text submitted intentionally by users via the feedback command.</li>
+    </ul>
+    <p>Message content is <strong>not</strong> stored permanently. AutoMod and counting checks happen in real-time and are not saved to any database.</p>
+
+    <h2>3. How We Use Your Data</h2>
+    <ul>
+      <li>To deliver the features of the Bot (leveling, economy, moderation, logging, etc.).</li>
+      <li>To persist user preferences and server configurations between sessions.</li>
+      <li>To restore server configurations from backups when requested by server administrators.</li>
+    </ul>
+    <p>We do <strong>not</strong>:</p>
+    <ul>
+      <li>Sell, rent, or share your data with third parties.</li>
+      <li>Use your data for advertising or marketing purposes.</li>
+      <li>Store data beyond what is needed for the Bot's features.</li>
+    </ul>
+
+    <h2>4. Data Storage and Security</h2>
+    <ul>
+      <li>All data is stored in a secure database associated with the Bot's hosting environment.</li>
+      <li>Data is only accessible to the Bot's developer(s) and is not shared publicly.</li>
+      <li>We take reasonable technical measures to protect stored data from unauthorised access.</li>
+      <li>No system is 100% secure, and we cannot guarantee absolute security.</li>
+    </ul>
+
+    <h2>5. Data Retention</h2>
+    <ul>
+      <li><strong>User data</strong> (XP, economy balance) is retained as long as the Bot is present in the server where you are active, or until a server administrator requests its deletion.</li>
+      <li><strong>Server configuration</strong> is retained as long as the Bot is present in that server. When the Bot is removed from a server, its associated data may be retained for up to 30 days before being deleted.</li>
+      <li><strong>Backup data</strong> is retained until deleted by a server administrator or the Bot is removed.</li>
+    </ul>
+
+    <h2>6. Your Rights</h2>
+    <p>Depending on your location, you may have rights under applicable data protection laws, including:</p>
+    <ul>
+      <li><strong>Access</strong> — Request a summary of the data we hold about you.</li>
+      <li><strong>Deletion</strong> — Request deletion of your data (economy balance, XP, etc.).</li>
+      <li><strong>Correction</strong> — Request correction of inaccurate data.</li>
+    </ul>
+    <p>To exercise any of these rights, contact the Bot's developer through the designated support channel in the official support server.</p>
+    <p>Server administrators may request deletion of all data associated with their server at any time by removing the Bot and submitting a deletion request.</p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>The Bot is intended for use on Discord, which requires users to be at least 13 years of age (or older in some jurisdictions) under Discord's own Terms of Service. We do not knowingly collect data from users under the applicable minimum age. If you believe a user under the minimum age has submitted data to the Bot, please contact us.</p>
+
+    <h2>8. Third-Party Services</h2>
+    <p>The Bot operates within the Discord platform and is subject to <a href="https://discord.com/privacy" target="_blank" rel="noopener">Discord's Privacy Policy</a>. We are not responsible for Discord's data practices.</p>
+    <p>The Bot does not integrate with any other third-party services that collect personal data.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Significant changes will be announced in the Bot's official support server. Continued use of the Bot after changes take effect constitutes acceptance of the updated policy.</p>
+
+    <h2>10. Contact</h2>
+    <p>For privacy-related questions or requests, please reach out via the official support server or the Bot's designated support contact.</p>
+  </div>
+
+  <!-- ==================== TERMS OF SERVICE ==================== -->
+  <div id="tos" class="section">
+    <h1>Terms of Service</h1>
+    <div class="updated">Last updated: March 13, 2026</div>
+
+    <p>By adding Nexus ("the Bot") to your Discord server or by using any of its features, you agree to these Terms of Service ("Terms"). If you do not agree, do not add or use the Bot.</p>
+
+    <h2>1. Eligibility</h2>
+    <ul>
+      <li>You must be at least 13 years of age (or the minimum age required in your country) to use the Bot, in accordance with <a href="https://discord.com/terms" target="_blank" rel="noopener">Discord's Terms of Service</a>.</li>
+      <li>By using the Bot, you confirm that you meet the minimum age requirement and that your use complies with all applicable laws in your jurisdiction.</li>
+    </ul>
+
+    <h2>2. Acceptable Use</h2>
+    <p>You agree to use the Bot only for lawful purposes and in a manner consistent with these Terms and Discord's Community Guidelines.</p>
+    <h3>You may NOT use the Bot to:</h3>
+    <ul>
+      <li>Harass, threaten, intimidate, or harm other users.</li>
+      <li>Distribute spam, malware, phishing links, or any malicious content.</li>
+      <li>Attempt to exploit, abuse, reverse-engineer, or disrupt the Bot or its hosting infrastructure.</li>
+      <li>Circumvent moderation actions (bans, mutes, kicks) imposed by server administrators or the Bot.</li>
+      <li>Automate interactions with the Bot in ways that cause excessive load or degrade performance for other users.</li>
+      <li>Use the Bot to violate Discord's Terms of Service or Community Guidelines.</li>
+      <li>Use the Bot to engage in, facilitate, or promote any illegal activity.</li>
+    </ul>
+
+    <h2>3. Server Administrator Responsibilities</h2>
+    <p>If you add the Bot to a Discord server, you are a "server administrator" for the purposes of these Terms. As a server administrator you agree to:</p>
+    <ul>
+      <li>Configure the Bot responsibly and in compliance with Discord's platform rules.</li>
+      <li>Ensure the Bot's features (AutoMod, moderation commands, logging, anti-nuke, etc.) are used appropriately within your community.</li>
+      <li>Not abuse moderation features to unjustly target users.</li>
+      <li>Take responsibility for any moderation actions taken by the Bot based on your configuration.</li>
+    </ul>
+
+    <h2>4. Features and Availability</h2>
+    <ul>
+      <li>The Bot's features are provided <strong>as-is</strong> and on an <strong>as-available</strong> basis.</li>
+      <li>We reserve the right to add, modify, or remove any feature at any time without prior notice.</li>
+      <li>We do not guarantee 100% uptime. The Bot may experience downtime due to maintenance, Discord outages, or other technical issues.</li>
+      <li>We are not liable for any loss (including data loss) resulting from Bot downtime or errors.</li>
+    </ul>
+
+    <h2>5. Economy and Virtual Currency</h2>
+    <ul>
+      <li>The Bot's economy system (coins, balances, transactions) uses <strong>virtual currency with no real-world monetary value</strong>.</li>
+      <li>Virtual currency cannot be exchanged, sold, transferred outside the Bot, or redeemed for real money or goods.</li>
+      <li>We reserve the right to reset, modify, or remove economy data at any time.</li>
+    </ul>
+
+    <h2>6. Leveling System</h2>
+    <ul>
+      <li>XP and levels earned through the Bot's leveling system have no monetary value.</li>
+      <li>Level data and associated role rewards are managed at the discretion of server administrators.</li>
+      <li>We reserve the right to adjust XP calculation mechanics at any time.</li>
+    </ul>
+
+    <h2>7. Moderation Features</h2>
+    <ul>
+      <li>AutoMod, anti-nuke, security, and moderation features are tools provided to help server administrators manage their communities.</li>
+      <li>We are not responsible for any consequences arising from moderation actions taken by the Bot based on configurations set by server administrators.</li>
+      <li>The developer(s) reserve the right to block access to the Bot for servers or users that misuse moderation features.</li>
+    </ul>
+
+    <h2>8. Prohibited Servers</h2>
+    <p>The Bot must not be added to or used in servers that promote or facilitate:</p>
+    <ul>
+      <li>Hate speech, racism, or discrimination based on protected characteristics.</li>
+      <li>Illegal activities of any kind.</li>
+      <li>Harassment, doxxing, or targeted abuse of individuals.</li>
+      <li>Content that violates Discord's Community Guidelines.</li>
+    </ul>
+    <p>We reserve the right to remove the Bot from any server found to be in violation of these Terms without notice.</p>
+
+    <h2>9. Termination</h2>
+    <p>We reserve the right to:</p>
+    <ul>
+      <li>Restrict or remove the Bot's access to any server or user at any time, for any reason, including violation of these Terms.</li>
+      <li>Discontinue the Bot entirely at any time without prior notice.</li>
+    </ul>
+    <p>You may remove the Bot from your server at any time by kicking it through Discord's standard server management tools.</p>
+
+    <h2>10. Disclaimer of Warranties</h2>
+    <p class="legal-caps">THE BOT IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p>
+    <p>We do not warrant that:</p>
+    <ul>
+      <li>The Bot will be error-free or uninterrupted.</li>
+      <li>Any defects will be corrected.</li>
+      <li>The Bot or its server are free of viruses or other harmful components.</li>
+    </ul>
+
+    <h2>11. Limitation of Liability</h2>
+    <p class="legal-caps">TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, THE BOT'S DEVELOPER(S) SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR LOSS OF GOODWILL, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE BOT.</p>
+
+    <h2>12. Indemnification</h2>
+    <p>You agree to indemnify and hold harmless the Bot's developer(s) from and against any claims, liabilities, damages, losses, or expenses (including legal fees) arising from your use of the Bot or your violation of these Terms.</p>
+
+    <h2>13. Changes to These Terms</h2>
+    <p>We may update these Terms at any time. Significant changes will be announced in the official support server. Continued use of the Bot after changes take effect constitutes acceptance of the updated Terms.</p>
+
+    <h2>14. Governing Law</h2>
+    <p>These Terms are governed by applicable law. Any disputes shall be resolved in the jurisdiction of the Bot's developer(s).</p>
+
+    <h2>15. Contact</h2>
+    <p>For questions regarding these Terms, please contact us via the official support server or the Bot's designated support contact.</p>
+
+    <h2>16. Related Policies</h2>
+    <ul>
+      <li><a href="#privacy" onclick="switchTab('privacy')">Privacy Policy</a></li>
+      <li><a href="https://discord.com/terms" target="_blank" rel="noopener">Discord Terms of Service</a></li>
+      <li><a href="https://discord.com/guidelines" target="_blank" rel="noopener">Discord Community Guidelines</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://discord.com/terms" target="_blank" rel="noopener">Discord Terms</a>
+    <a href="https://discord.com/guidelines" target="_blank" rel="noopener">Discord Guidelines</a>
+    <a href="https://discord.com/privacy" target="_blank" rel="noopener">Discord Privacy</a>
+  </div>
+</footer>
+
+<script>
+  function switchTab(id, pushHistory) {
+    document.querySelectorAll('.tab').forEach(function(t) {
+      t.classList.toggle('active', t.dataset.target === id);
+    });
+    document.querySelectorAll('.section').forEach(function(s) {
+      s.classList.toggle('active', s.id === id);
+    });
+    if (pushHistory) {
+      history.pushState(null, '', '#' + id);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.querySelectorAll('.tab').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      switchTab(this.dataset.target, true);
+    });
+  });
+
+  window.addEventListener('hashchange', function() {
+    var hash = location.hash.replace('#', '');
+    if (hash === 'tos' || hash === 'privacy') {
+      switchTab(hash, false);
+    }
+  });
+
+  window.addEventListener('popstate', function() {
+    var hash = location.hash.replace('#', '');
+    if (hash === 'tos' || hash === 'privacy') {
+      switchTab(hash, false);
+    }
+  });
+
+  (function() {
+    var hash = location.hash.replace('#', '');
+    if (hash === 'tos' || hash === 'privacy') {
+      switchTab(hash, false);
+    }
+  })();
+</script>
+
+</body>
+</html>
